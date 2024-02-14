@@ -18,7 +18,7 @@ Als onderdeel van dit college gaan jullie een Lab uitvoeren, waarbij jullie GitH
 2. Voeg de groepsnaam aan de README.md toe en commit deze wijziging via de webinterface
 
 > [!NOTE]
-> Je merkt dat er geen branch nodig is en dat je direct op de main branch kunt wijzigen. Als je ervan uit wil gaan dat je main branch alleen maar code bevat die door minstens vier ogen bekeken is en wellicht gecontroleerd is door een CI pipeline, dan is dit niet wenselijk. We komen er later op terug.
+> Je merkt dat er geen branch nodig is en dat je direct op de main branch kunt wijzigen. Als je ervan uit wilt gaan dat je main branch alleen maar code bevat die door minstens vier ogen bekeken is en wellicht gecontroleerd is door een CI pipeline, dan is dit niet wenselijk. We komen er later op terug.
 
 # 2. Werken met branches en pull requests
 
@@ -41,6 +41,8 @@ Als onderdeel van dit college gaan jullie een Lab uitvoeren, waarbij jullie GitH
 > [!NOTE]
 > Het is goed gebruik om voordat je een pull request op je feature branch maakt, eerst een **forward integration** te doen. Je haalt daarbij de laatste wijzigingen uit de main branch op. Hiermee voorkom je dat je op het moment dat je de pull request aanmaakt, je merge conflicts krijgt.
 
+Een lab over het werken met pull requests vind je hier: https://github.com/skills/review-pull-requests
+
 # 3. Branch policies 
 
 Je gaat nu Branch policies instellen, waardoor het verplicht wordt om via een pull request op de main branch wijzigingen te maken. Dit zorgt ervoor dat de main branch code van een vantevoren afgesproken kwaliteit bevat.
@@ -60,6 +62,8 @@ Je gaat nu Branch policies instellen, waardoor het verplicht wordt om via een pu
 > Je ziet dat je nu niet meer rechtstreeks op de main branch kunt wijzigen. Dit is een belangrijk onderdeel van het werken met GitHub. Het zorgt ervoor dat de main branch alleen maar code bevat die door minstens vier ogen bekeken is en wellicht gecontroleerd is door een CI pipeline. De CI pipeline wordt in het volgende gastcollege behandeld.
 
 # 4. Een IDE gebruiken zoals Visual Studio Code
+
+In een IDE heb je veel meer mogelijkheden dan in de webinterface van GitHub. Je kunt bijvoorbeeld makkelijker wijzigingen maken, je kunt makkelijker zien wat er gewijzigd is en je kunt makkelijker wijzigingen mergen. In deze paragraaf ga je met je groepje samenwerken in een IDE.
 
 1. Alle groepsleden openen Visual Studio Code (of een andere eigen IDE)
 2. Iedereen doet een clone de repository naar de lokale machine (via de IDE of via het commando: `git clone <url>`, waarbij je `<url>` vervangt door de URL van je repository)
@@ -82,7 +86,20 @@ Je gaat nu Branch policies instellen, waardoor het verplicht wordt om via een pu
 > [!NOTE]
 > Je merkt dat het, ondanks de feature branches en pull requests, nog best lastig kan zijn om wijzigingen te mergen. Dit komt omdat je met meerdere mensen aan dezelfde code werkt. Dit is een belangrijk onderdeel van het werken met GitHub. Het zorgt ervoor dat je goed moet communiceren en dat je goed moet nadenken over de wijzigingen die je maakt. Zorg er ook voor dat je regelmatig een forward integration uitvoert, zodat je de laatste wijzigingen uit de main branch opneemt.
 
-# 5. Werken met historie
+Wil je meer leren over het aanpakken van merge conflicten? Volg dan deze GitHub skills lab: https://github.com/skills/resolve-merge-conflicts.
 
+# 5. Overige Repo instellingen
 
-# 6. Branch policies instellen op je eigen projectomgeving
+In GitHub kun je nog veel meer instellingen maken in je repo. Denk hierbij aan instellingen met betrekking tot rechten, maar ook instellingen met betrekking tot de history die je in Git wilt opbouwen; linear of non-linear.
+
+1. Ga naar de instellingen van de repository (tab: general)
+2. Stel de repository dusdanig in dat alleen squash merges toegestaan zijn
+3. Probeer nu een pull request te mergen, waarbij je meerdere commits hebt. 
+
+> [!NOTE]
+> Je zult zien dat de commits samengevoegd worden tot 1 commit. Dit zorgt ervoor dat het eenvoudiger wordt om een wijziging terug te draaien. Je hoeft immers maar 1 commit terug te draaien in plaats van alle commits die nodig waren voor de wijziging.
+
+4. Ga opnieuw naar de instellingen van de repository (tab: Collaborators and teams)
+5. Voeg een van de andere groepen toe en zorg dat zij alleen kunnen lezen
+6. Vraag die groep om te controleren of zij inderdaad alleen kunnen lezen
+
