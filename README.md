@@ -6,6 +6,12 @@ Als onderdeel van dit college gaan jullie een Lab uitvoeren, waarbij jullie GitH
 > Loop het stap voor stap door. Als je een stap mist, kan het zijn dat vervolgopdrachten niet lukken.
 > Tot paragraaf 4 werk je alleen maar in je browser, vanaf paragraaf 4 ga je een IDE gebruiken voor wijzigingen.
 
+> [!TIP]
+> Naast Visual Studio Code, kan ik adviseren om de volgende tools te installeren:
+> 
+> * [Git Fork](https://git-fork.com/) - Erg handig, omdat er een hoop gevisualiseerd wordt en het is mogelijk om de uitgevoerde git commando's te zien
+> * [GitHub Desktop](https://desktop.github.com/) - Hiermee is het mogelijk om signed commits te maken (zonder dat je met GPG keys hoeft te werken) wat in sommige organisaties verplicht is
+
 # 1. Initialiseren repo
 
 1. Initialiseer je repo door een README.md en een .gitignore toe te voegen
@@ -55,11 +61,28 @@ Je gaat nu Branch policies instellen, waardoor het verplicht wordt om via een pu
 
 # 4. Een IDE gebruiken zoals Visual Studio Code
 
-1. Open Visual Studio Code (of je eigen IDE)
+1. Alle groepsleden openen Visual Studio Code (of een andere eigen IDE)
+2. Iedereen doet een clone de repository naar de lokale machine (via de IDE of via het commando: `git clone <url>`, waarbij je `<url>` vervangt door de URL van je repository)
+3. Werk samen, er moeten twee verschillende feature branches aangemaakt worden (als je bijvoorbeeld met z'n vieren bent dan werk je in tweetallen, ieder tweetal maakt een eigen feature branch aan)
+4. Publiceer de feature branches naar de repository (ZONDER wijzigingen)
+5. Start nu met het maken van wijzigingen in de feature branches. Probeer alles door elkaar te doen, zodat je merge conflicten krijgt
+6. Zorg ervoor dat alles gemerged wordt naar de feature branches
+7. Maak voor elke feature branch een pull request aan
+8. Merge de eerste pull request
+9. Voer een **forward integration** uit; merge de wijziging van de main naar de tweede feature branch. Dit dien je via je lokale repo te doen. Grofweg zijn de stappen als volgt:
+   1. checkout main
+   1. pull (bij voorkeur met een rebase, zodat je geen merge commit krijgt)
+   1. checkout <feature branch>
+   1. merge main
+   1. Los eventuele merge conflicten op
+   1. force push
+10. Maak de tweede pull request aan
+11. Laat iemand anders de pull request reviewen en mergen
 
-# 5. Tegelijkertijd wijzigingen maken in aparte branches en deze samenvoegen
+> [!NOTE]
+> Je merkt dat het, ondanks de feature branches en pull requests, nog best lastig kan zijn om wijzigingen te mergen. Dit komt omdat je met meerdere mensen aan dezelfde code werkt. Dit is een belangrijk onderdeel van het werken met GitHub. Het zorgt ervoor dat je goed moet communiceren en dat je goed moet nadenken over de wijzigingen die je maakt. Zorg er ook voor dat je regelmatig een forward integration uitvoert, zodat je de laatste wijzigingen uit de main branch opneemt.
 
-1. Maak ieder een eigen feature branch aan
+# 5. Werken met historie
 
-# 6. Werken met historie
 
+# 6. Branch policies instellen op je eigen projectomgeving
