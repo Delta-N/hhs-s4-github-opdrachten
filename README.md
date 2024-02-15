@@ -47,6 +47,9 @@ Een lab over het werken met pull requests vind je hier: https://github.com/skill
 
 Je gaat nu Branch policies instellen, waardoor het verplicht wordt om via een pull request op de main branch wijzigingen te maken. Dit zorgt ervoor dat de main branch code van een vantevoren afgesproken kwaliteit bevat.
 
+> [!NOTE]
+> Omdat jullie een Pro licentie hebben, kunnen jullie branch policies instellen. Deze policies kunnen echter niet "enforced" worden, dit is geen onderdeel van de "Pro" licentie. Dit betekent dat je de policies wel kunt instellen, maar dat je er niet op kunt vertrouwen dat ze ook daadwerkelijk nageleefd worden. Dit is een belangrijk verschil met de "Enterprise" licentie. Ga er voor nu vanuit dat de policies wel nageleefd moeten worden.
+
 1. Stel de branch policies zo in dat:
    * Pushes direct naar de main branch niet meer toegestaan zijn
    * Pull requests verplicht zijn voor het mergen (1 approver)
